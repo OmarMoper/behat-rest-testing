@@ -51,13 +51,14 @@ class RestContext extends BaseContext
     public function valueOfTheFieldEquals($name, $value)
     {
         $this->theResponseHasAField($name);
-        if ($this->responseData[$name] != $value) {
+        $response_data = $this->getResponseData();
+        if ($response_data[$name] != $value) {
             throw new Exception(
                 sprintf(
                     'Value "%s" was expected for field "%s", but value "%s" found instead.',
                     $value,
                     $name,
-                    $this->responseData[$name]
+                    $response_data[$name]
                 )
             );
         }
