@@ -17,7 +17,7 @@
     "require": {
         "php": ">=5.4.0",
         "behat/behat": "~3.0.6|~3.1.0",
-        "behat/web-api-extension" : "dev-master"
+        "behat/web-api-extension" : "*"
     },
     "require-dev": {
         "squizlabs/php_codesniffer" : ">=2.0"
